@@ -25,7 +25,8 @@ app.use(favicon(path.join(__dirname,"public",'favicon.ico')))
 ////////////////////////////////////////////////////////////////////////////
 app.use(cors({
     origin:"*",
-    Methods:"get post put patch delete"
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+   
     
 }))
 app.use(bodyParser.urlencoded({ extended: false }))
