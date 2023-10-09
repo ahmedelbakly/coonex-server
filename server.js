@@ -1,15 +1,18 @@
 import dotenv from "dotenv";
 dotenv.config({ path: "./.env" });
+const port = process.env.PORT || 5000;
 import express from "express";
 const app = express();
-const port = process.env.PORT || 5000;
+import path from 'path';
+import { fileURLToPath } from 'url';
 import cors from "cors";
 import bodyParser from "body-parser";
 import connectDB from "./db.js"
-
+import favicon from 'serve-favicon'
 import userRouter from "./routes/usersRoute.js";
 import productRouter from "./routes/productRoute.js";
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 
@@ -17,7 +20,8 @@ import productRouter from "./routes/productRoute.js";
 ////////////////////////////////////////////////////////////////////////////
 connectDB();
 ////////////////////////////////////////////////////////////////////////////
-app.use(express.static("public"));
+
+app.use(favicon(path.join(__dirname, 'public',"images",'favicon.ico')))
 ////////////////////////////////////////////////////////////////////////////
 app.use(cors({
     origin:"*",
