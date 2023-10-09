@@ -14,7 +14,7 @@ let refreshTokens = [];
 
 export const createUser = async (req, res, next) => {
   const { username, email, password, agree } = req.body;
-  console.log(req.body);
+  //console.log(req.body);
   try {
     if ((username && email && password, agree)) {
       const user =
@@ -46,13 +46,13 @@ export const createUser = async (req, res, next) => {
       return res.json({ error: "all fields are required" });
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 ////////////////////////////////////////////////////////////////////
 
 export const updateUser = async (req, res, next) => {
-  console.log(req.body);
+ // console.log(req.body);
   const { id } = req.user;
   const { username, email, phone } = req.body;
 
@@ -73,7 +73,7 @@ export const updateUser = async (req, res, next) => {
       res.json("data is error");
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 ////////////////////////////////////////////////////////////////////
@@ -99,7 +99,7 @@ export const updateUserPass = async (req, res, next) => {
       return res.json({ error: "all filed is required" });
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 ////////////////////////////////////////////////////////////////////
@@ -132,7 +132,7 @@ export const createUserBus = async (req, res, next) => {
       res.json(req.body);
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 
@@ -176,7 +176,7 @@ export const updateUserImage = async (req, res, next) => {
       res.json(req.body);
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 
@@ -311,7 +311,7 @@ export const getUser = async (req, res, next) => {
       });
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 
@@ -568,7 +568,7 @@ exports.restPassById = async (req, res, next) => {
       });
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 

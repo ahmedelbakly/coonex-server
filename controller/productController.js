@@ -4,8 +4,7 @@
 import { AdForRent, AdForSale } from "../models/productModel.js";
 
 export const createAdForSale = async (req, res, next) => {
-  console.log(req.body);
-  console.log(req.files);
+  
   let productImg = [];
   const {
     userId,
@@ -81,20 +80,20 @@ export const createAdForSale = async (req, res, next) => {
       const rentProCom = await AdForRent.find({ category: "commercial" });
       const allProducts = [...rentProRes, ...rentProCom, ...saleProRes, ...saleProCom];
 
-      console.log({ saleProCom,saleProRes,allProducts, massage: " save success in database" });
+      //console.log({ saleProCom,saleProRes,allProducts, massage: " save success in database" });
       res.json({ saleProCom,saleProRes,allProducts, massage: " save success in database" });
     } else {
       res.json({ error: "all fields is required" });
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 export const createAdForRent = async (req, res, next) => {
-  console.log(req.body);
-  console.log(req.files);
+ // console.log(req.body);
+  //console.log(req.files);
   let productImg = [];
   const {
     title,
@@ -176,18 +175,18 @@ export const createAdForRent = async (req, res, next) => {
       res.json({ error: "all fields is required" });
     }
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
 
 export const searchSale = async (req, res, next) => {
-  console.log(req.body);
+ // console.log(req.body);
 
   const products = await AdForSale.find(req.body);
   res.json(products);
 };
 export const searchRent = async (req, res, next) => {
-  console.log(req.body);
+ // console.log(req.body);
 
   const products = await AdForRent.find(req.body);
   res.json(products);
@@ -203,6 +202,6 @@ export const getProducts = async (req, res, next) => {
 
     return res.json({rentProCom, rentProRes, saleProCom, saleProRes, allProducts});
   } catch (error) {
-    console.log(error);
+    res.json(error);
   }
 };
