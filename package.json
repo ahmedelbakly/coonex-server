@@ -5,11 +5,11 @@
     "node": "16.15.1"
   },
   "description": "",
-  "main": "server.js",
+  "main": "server.mjs",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.mjs"
   },
   "keywords": [],
   "author": "",

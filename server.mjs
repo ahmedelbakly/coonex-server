@@ -34,7 +34,7 @@ app.use(bodyParser.json())
 
 /// multer 
 
-
+//console.log("ahmed");
 ////////////////////////////////////////////////////////////////////////////
 // userRouts
 app.use("/api",userRouter)
