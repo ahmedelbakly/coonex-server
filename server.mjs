@@ -44,10 +44,12 @@ app.use("/api", userRouter)
 
 
 ///////////////////////////////////////////////////////////////////////////
-// app.get("/", (req, res) => {
-//   res.send("Hello World!");
-// });
+app.get("/", (req, res) => {
+  res.send("Hello coonex!");
+});
 ////////////////////////////////////////////////////////////////////////////
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+ 
+// coonex app
