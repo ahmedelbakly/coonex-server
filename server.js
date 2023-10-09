@@ -6,10 +6,10 @@ const port = process.env.PORT || 5000;
 import cors from "cors";
 import bodyParser from "body-parser";
 import connectDB from "./db.js"
-import multer from "multer";
+
 import userRouter from "./routes/usersRoute.js";
 import productRouter from "./routes/productRoute.js";
-import {upload} from "./multer.js"
+
 
 
 
