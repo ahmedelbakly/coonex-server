@@ -7,10 +7,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from "cors";
 import bodyParser from "body-parser";
-import connectDB from "./db.cjs"
+import connectDB from "./db.mjs"
 import favicon from 'serve-favicon'
-import userRouter from "./routes/usersRoute.js";
-import productRouter from "./routes/productRoute.js";
+import userRouter from "./routes/usersRoute.mjs";
+import productRouter from "./routes/productRoute.mjs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 

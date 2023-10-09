@@ -8,12 +8,12 @@ import {
   createRefreshToken,
   updateUserPass,
   getUser
-} from "../controller/userController.cjs";
+} from "../controller/userController.mjs";
 const router = Router();
-import { upload } from "../multer.cjs";
-import auth from "../models/auth.cjs";
+import { upload } from "../multer.mjs";
+import auth from "../models/auth.mjs";
 
-import authGet from "../models/auth2.cjs";
+import authGet from "../models/auth2.mjs";
 
 // define the home page route
 

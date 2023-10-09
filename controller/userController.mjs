@@ -1,11 +1,11 @@
 import dotenv from "dotenv";
 dotenv.config({ path: "../.env" });
-import { User, UserCompany } from "../models/userModel.cjs";
+import { User, UserCompany } from "../models/userModel.mjs";
 import bcrypt from "bcrypt";
 const salt = bcrypt.genSaltSync(+process.env.HASH_SALT);
 const salt2 = bcrypt.genSaltSync(15);
 import jwt from "jsonwebtoken";
-import { generateToken } from "../helper/functions.cjs";
+import { generateToken } from "../helper/functions.mjs";
 // import { sendMailToUser } from "../helper/nodeMail.js";
 const { sign, verify } = jwt;
 let refreshTokens = [];

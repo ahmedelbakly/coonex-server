@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import {connect,set} from "mongoose";
 import dotenv from "dotenv";
 dotenv.config({ path: "./.env" });
 const DB = process.env.MONGO_URI.replace("<password>", process.env.DB_PASSWORD);
@@ -7,9 +7,9 @@ const DB = process.env.MONGO_URI.replace("<password>", process.env.DB_PASSWORD);
 //const DB = process.env.MONGO_URI;
 
 const connectDB = () => {
-  mongoose.set("strictQuery", false);
-  mongoose
-    .connect(DB, {
+ set("strictQuery", false);
+
+    connect(DB, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     })
