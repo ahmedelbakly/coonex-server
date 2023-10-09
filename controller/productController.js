@@ -1,4 +1,6 @@
-import { json } from "express";
+// product-controller
+
+
 import { AdForRent, AdForSale } from "../models/productModel.js";
 
 export const createAdForSale = async (req, res, next) => {
