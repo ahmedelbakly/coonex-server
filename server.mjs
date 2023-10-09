@@ -9,7 +9,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import connectDB from "./db.mjs"
 import favicon from 'serve-favicon'
-import userRouter from "./routes/usersRoute.mjs";
+const userRouter = await import("./routes/usersRoute.mjs")
 import productRouter from "./routes/productRoute.mjs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
