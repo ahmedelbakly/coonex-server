@@ -7,7 +7,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from "cors";
 import bodyParser from "body-parser";
-import connectDB from "./db.js"
+import connectDB from "./db.cjs"
 import favicon from 'serve-favicon'
 import userRouter from "./routes/usersRoute.js";
 import productRouter from "./routes/productRoute.js";

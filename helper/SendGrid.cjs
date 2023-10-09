@@ -1,6 +1,6 @@
 // import dotenv from "dotenv";
 // dotenv.config({ path: "./.env" });
-// const sgMail = require("@sendgrid/mail");
+
 
 // // using Twilio SendGrid's v3 Node.js Library
 // // https://github.com/sendgrid/sendgrid-nodejs javascript

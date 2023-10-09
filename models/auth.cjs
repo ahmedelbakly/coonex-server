@@ -4,7 +4,7 @@ const { sign, verify } = jwt;
 
 
 
-// const funHelper =  require("../helper/functions")
+
 
 const auth = async (req, res, next) => {
   const authHeader = req.headers.authorization;

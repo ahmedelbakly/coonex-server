@@ -1,7 +1,7 @@
 // product-controller
 
 
-import { AdForRent, AdForSale } from "../models/productModel.js";
+import { AdForRent, AdForSale } from "../models/productModel.cjs";
 
 export const createAdForSale = async (req, res, next) => {
   

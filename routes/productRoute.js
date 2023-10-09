@@ -6,9 +6,9 @@ import {
   searchRent,
   searchSale,
   
-} from "../controller/productController.js";
+} from "../controller/productController.cjs";
 const router = Router();
-import {uploadMulti } from "../multer.js";
+import {uploadMulti } from "../multer.cjs";
 
 // define the home page route
 
