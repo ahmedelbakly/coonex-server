@@ -9,7 +9,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import connectDB from "./db.mjs"
 import favicon from 'serve-favicon'
-import userRouter from "./routes/productRoute.mjs"
+import userRouter from "./routes/usersRoute.mjs";
 import productRouter from "./routes/productRoute.mjs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -37,9 +37,9 @@ app.use(bodyParser.json())
 //console.log("ahmed");
 ////////////////////////////////////////////////////////////////////////////
 // userRouts
-//app.use("/api",userRouter)
+
 app.use("/api", productRouter)
-//app.use("/api",productRouter)
+
 app.use("/api", userRouter)
 
 

@@ -13,6 +13,7 @@ let refreshTokens = [];
 ////////////////////////////////////////////////////////////////////
 
 export const createUser = async (req, res, next) => {
+  console.log(req.body);
   const { username, email, password, agree } = req.body;
   //console.log(req.body);
   try {
