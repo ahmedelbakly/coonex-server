@@ -161,6 +161,7 @@ export const updateBusUser = async (req, res, next) => {
 /////////////////////////////////////////////////////////////////
 
 export const updateUserImage = async (req, res, next) => {
+  console.log(req.body);
   const { id } = req.body;
 
   try {

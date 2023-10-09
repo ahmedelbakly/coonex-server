@@ -44,8 +44,8 @@ export const createAdForSale = async (req, res, next) => {
       listerType &&
       paymentMethod &&
       furnished &&
-      mortgaged &&
-      req.files
+      mortgaged
+      
     ) {
       req.files &&
         req.files.proImg.map(
@@ -70,7 +70,7 @@ export const createAdForSale = async (req, res, next) => {
         paymentMethod: paymentMethod,
         furnished: furnished,
         mortgaged: mortgaged,
-        projectedBy: req.files.logo[0].filename,
+        projectedBy: "",
         images: productImg,
       });
      
@@ -135,8 +135,8 @@ export const createAdForRent = async (req, res, next) => {
         paymentMethod &&
         furnished &&
         mortgaged &&
-        unitDetails &&
-        req.files)
+        unitDetails 
+        )
     ) {
       req.files &&
         req.files.proImg.map(
@@ -161,7 +161,7 @@ export const createAdForRent = async (req, res, next) => {
         paymentMethod: paymentMethod,
         furnished: furnished,
         mortgaged: mortgaged,
-        projectedBy: req.files.logo[0].filename,
+        projectedBy:  "",                 //req.files.logo[0].filename,
         images: productImg,
         unitDetails: unitDetails,
       });
