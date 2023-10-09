@@ -14,11 +14,11 @@ import {uploadMulti } from "../multer.mjs";
 
 router.post(
   "/adSale",createAdForSale
-                                      /// uploadMulti,
+   /// uploadMulti,
 );
 router.post(
   "/adRent",createAdForRent
-                                             ///uploadMulti,
+  ///uploadMulti,
   
 );
 router.post(
