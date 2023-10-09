@@ -4,7 +4,8 @@
 import { AdForRent, AdForSale } from "../models/productModel.mjs";
 
 export const createAdForSale = async (req, res, next) => {
-  
+  console.log(req.body);
+  console.log(req.files);
   let productImg = [];
   const {
     userId,
@@ -92,8 +93,8 @@ export const createAdForSale = async (req, res, next) => {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 export const createAdForRent = async (req, res, next) => {
- // console.log(req.body);
-  //console.log(req.files);
+ console.log(req.body);
+  console.log(req.files);
   let productImg = [];
   const {
     title,
