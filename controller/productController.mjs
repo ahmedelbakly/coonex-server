@@ -5,7 +5,7 @@ import { AdForRent, AdForSale } from "../models/productModel.mjs";
 
 export const createAdForSale = async (req, res, next) => {
   
-  
+  console.log(req.body);
   
   let productImg = [];
   const {
@@ -51,7 +51,7 @@ export const createAdForSale = async (req, res, next) => {
       
     ) {
       
-
+      console.log("##################createAdForSale");
       await AdForSale.create({
         userId: userId,
         title: title,
