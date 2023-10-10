@@ -21,8 +21,8 @@ const __dirname = path.dirname(__filename);
 connectDB();
 ////////////////////////////////////////////////////////////////////////////
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname,"public",'favicon.ico')))
+app.use(express.static(path.join(__dirname, '.vercel/output/static')));
+app.use(favicon(path.join(__dirname,".vercel/output/static",'favicon.ico')))
 ////////////////////////////////////////////////////////////////////////////
 app.use(cors({
     origin:"*",
