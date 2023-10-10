@@ -13,11 +13,11 @@ import {uploadMulti } from "../multer.mjs";
 // define the home page route
 
 router.post(
-  "/adSale",uploadMulti,createAdForSale
+  "/adSale",createAdForSale
 
 );
 router.post(
-  "/adRent", uploadMulti,createAdForRent
+  "/adRent", uploadMulti,createAdForRent     // "/adRent", uploadMulti,createAdForRent
  
   
 );
