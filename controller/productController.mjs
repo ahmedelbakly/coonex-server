@@ -4,8 +4,9 @@
 import { AdForRent, AdForSale } from "../models/productModel.mjs";
 
 export const createAdForSale = async (req, res, next) => {
-  console.log(req.body);
+  
   console.log(req.files);
+  
   let productImg = [];
   const {
     userId,
@@ -45,7 +46,8 @@ export const createAdForSale = async (req, res, next) => {
       listerType &&
       paymentMethod &&
       furnished &&
-      mortgaged
+      mortgaged && req.files
+      
       
     ) {
       req.files &&
@@ -71,7 +73,7 @@ export const createAdForSale = async (req, res, next) => {
         paymentMethod: paymentMethod,
         furnished: furnished,
         mortgaged: mortgaged,
-        projectedBy: "",
+        projectedBy: req.files.logo[0].filename,
         images: productImg,
       });
      
@@ -136,7 +138,8 @@ export const createAdForRent = async (req, res, next) => {
         paymentMethod &&
         furnished &&
         mortgaged &&
-        unitDetails 
+        unitDetails &&
+        req.files
         )
     ) {
       req.files &&
@@ -162,7 +165,7 @@ export const createAdForRent = async (req, res, next) => {
         paymentMethod: paymentMethod,
         furnished: furnished,
         mortgaged: mortgaged,
-        projectedBy:  "",                 //req.files.logo[0].filename,
+        projectedBy:  req.files.logo[0].filename,                 //req.files.logo[0].filename,
         images: productImg,
         unitDetails: unitDetails,
       });

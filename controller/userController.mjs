@@ -161,11 +161,12 @@ export const updateBusUser = async (req, res, next) => {
 /////////////////////////////////////////////////////////////////
 
 export const updateUserImage = async (req, res, next) => {
-  console.log(req.body);
+ 
   const { id } = req.body;
 
   try {
     if (id && req.file.filename) {
+
       await User.findOneAndUpdate(
         { _id: id },
         {
@@ -175,7 +176,7 @@ export const updateUserImage = async (req, res, next) => {
       const user = await User.findOne({ _id: id });
       return res.json(user);
     } else {
-      res.json(req.body);
+      res.json("data in not found");
     }
   } catch (error) {
     res.json(error);
